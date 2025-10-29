@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+html , body{
+    height: 100%;
+    width: 100%;
+}
+body{
+  background-color: #000;
+}
+ 
+.parent{
+  display: flex;
+  padding: 20px;
+  /* align-items: center; */
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.child{
+  width: 300px;
+  background-color: #222;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 20px 10px;
+  text-align: center;
+}
+.child img{
+  height: 140px;
+  width: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.child p{
+  margin: 20px 0;
+
+}
+
+.child button{
+  padding: 10px 20px;
+  color: black;
+  background-color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 20px;
+}
