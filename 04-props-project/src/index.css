@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html , body{
+    height: 100%;
+    width: 100%;
+}
+body{
+  background-color: rgb(222, 233, 233);
+}
+.parent{
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.card{
+  height: 290px;
+  width: 260px;
+  background-color: #ddc7f9;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #b1b1b1;
+  border-radius: 5px;
+  gap: 5px;
+}
+.card .top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card img{
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  border: 1px solid #7958a3;
+  object-fit: center;
+}
+
+.center h2{
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.center p{
+  font-size: 13px;
+  font-weight: 400;
+  margin-bottom: 19px;
+}
+.center .tag{
+  display: flex;
+  gap: 5px;
+}
+.tag h3{
+  font-size: 12px;
+  font-weight: 400;
+  background-color: #d2cccce7;
+  padding: 4px 8px;
+  border-radius: 5px;
+
+}
+  
+
+.bottom{
+  border-top:1px solid #dfdeded2;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 0;
+}
+
+.bottom button{
+  padding: 10px 20px;
+  font-size: 10px;
+  font-weight: 600;
+  border-radius: 30px;
+  border: none;
+  color: azure;
+  background-color: #111;
+}
+.bottom .btn{
+  background-color: transparent;
+  border: 1px solid #b1b1b1;
+  color: #111;
+}
