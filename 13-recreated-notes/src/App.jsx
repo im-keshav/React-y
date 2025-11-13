@@ -1,39 +1,41 @@
 import React, { useState } from 'react'
 
-
 const App = () => {
-  const [title, setTitle] = useState("")
-  const[details, setDetails]=useState("")
+
+  const [title, setTitle] = useState(" ")
+  const [details, setDetails] = useState(" ")
   const [task, setTask] = useState([])
+  
 
-    const submitHandler = (e) => {
-        e.preventDefault();
-        const newTask = [...task]
-        newTask.push({ title, details })
-        setTask(newTask)
 
-        setTitle("");
-        setDetails("");
-        
-    }
-    const deleteHandler = (idx) => {
+  const submitHandler = (e) => {
+    e.preventDefault();
+    const newTask = [...task]
+    newTask.push({ title , details })
+    setTask(newTask)
+
+    setTitle("");
+    setDetails("");
+    
+  }
+  const deleteHandler = (idx) => {
       const copyTask = [...task]
       copyTask.splice(idx, 1)
       setTask(copyTask)
 
       
     }
-  
   return (
-    <div className='h-screen lg:flex bg-black text-white '>
+    <div 
+    className='bg-black text-white h-screen flex' >
+      <form action="" className='flex flex-col w-1/2 gap-5 p-10 items-start '
+      onSubmit={(e)=>{
+        submitHandler(e)
+      }}>
+      <h1 className='text-3xl font-bold'>Notes...</h1>
 
 
-        <form action="" onSubmit={(e)=>{
-            submitHandler(e)
-        }} className='flex flex-col items-start gap-4 p-10 lg:w-1/2'>
-            <h1 className='text-3xl mb-2 font-bold' >Add Notes</h1>
-
-          <input 
+        <input 
         type="text" 
         placeholder='enter Notes heading' 
         className='px-5 w-full py-2 border-2 font-medium rounded outline-none '
@@ -51,17 +53,11 @@ const App = () => {
         onChange={(e)=>{
           setDetails(e.target.value)
         }}></textarea>
-
-        
-        <button className='bg-white active:scale-95 w-full font-medium text-black px-5 py-2 rounded outline-none'
-        >
+        <button className='bg-white text-black w-full rounded active:95 border-none font-medium py-2 px-5'>
           Add Notes
         </button>
-        
-        
       </form>
-      
-    
+
       <div className='lg:w-1/2 lg:border-l-2 p-10'>
        <h1 className='text-3xl font-bold'> Your Notes</h1>
        <div className="flex flex-wrap items-start justify-start gap-5 mt-6 h-[90%] overflow-auto ">
